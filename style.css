@@ -46,15 +46,6 @@
   margin-left: 14px;
 }
 
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 45px;
-  margin-bottom: 116px;
-  list-style: none;
-  justify-content: center;
-}
-
 .product-price-container {
   display: flex;
   justify-content: space-between;
@@ -71,19 +62,30 @@
   line-height: 24px;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  list-style: none;
+  justify-content: center;
+  margin-left: 85px;
+  margin-bottom: 116px;
+  width: 1110px;
+  height: 1191px;
+}
+
 .title {
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
   text-align: center;
-  vertical-align: middle;
-  width: 846;
-  height: 78;
-  margin: 220px 217px 110px;
+  width: 846px;
+  height: 78px;
+  margin: 220px 0px 110px 132px;
 }
 
 .title-container {
-  background-image: url(/images/bg_flowers.png);
+  background-image: url("/images/bg_flowers.png");
   background-position: left top;
   background-size: 790px 697px;
   align-content: center;
