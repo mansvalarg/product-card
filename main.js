@@ -27,8 +27,6 @@ function getRandomHexColor() {
   return `#${hexColor}`;
 }
 
-const randomColor = getRandomHexColor();
-
 
 // Открыть Google
 
