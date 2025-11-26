@@ -1,46 +1,66 @@
 // 3. Создать функцию, которая принимает 2 параметра:
 //  город и температуру и выводит сообщение в консоль "Сейчас в X температура  — Y градусов по Цельсию"
 
-function showCityTemp ( city, temperature ) {
-  console.log(`Температура в городе ${city}: ${temperature}\u00B0C`)
-};
+function showCityTemperature(city, temperature) {
+  console.log(`Температура в городе ${city}: ${temperature}\u00B0C`);
+}
 
-showCityTemp('Грозный', '17');
+showCityTemperature("Грозный", "17");
 
-// или короткий вариант с помощью тернарного ?:
+// или короткий вариант с помощью стрелочной функции:
 
-let getCityTemp = (city, temperature) => console.log(`Температура в городе ${city}: ${temperature}\u00B0C`);
-getCityTemp('Валарг', '15');
+const showCityTemperature = (city, temperature) =>
+  console.log(`Температура в городе ${city}: ${temperature}\u00B0C`);
+
+showCityTemperature('Валарг', '15');
 
 // 4. Создать переменную, которая хранит внутри себя скорость звука (гуглим). 
 // Создать функцию, которая принимает 1 параметр - скорость, внутри функции происходит проверка: 
 // если переданная скорость выше скорости звука — выводим лог "Сверхзвуковая скорость", 
 // если ниже — "Дозвуковая скорость"? если равна — "Скорость звука"
 
-const SPEED_OF_LIGHT = 299792458;
-let x = 100;
-let speed = x === SPEED_OF_LIGHT ? 'Скорость света' : x > SPEED_OF_LIGHT ? 'Сверхзвуковая скорость' : 'Дозвуковая скорость';
-console.log(speed);
+const SPEED_OF_SOUND = 343;
+
+function showSpeed(speed) {
+  if (speed > SPEED_OF_SOUND) {
+    console.log("Сверхзвуковая скорость");
+  } else if (speed < SPEED_OF_SOUND) {
+    console.log("Дозвуковая скорость");
+  } else {
+    console.log("Скорость звука");
+  }
+}
 
 // 5. Создать переменную №1, которая содержит продукт и переменную №2, которая содержит его цену (на ваше усмотрение). 
 // Далее создаем функцию, которая принимает 1 параметр - текущий бюджет, внутри функции происходит проверка: 
 // если бюджет превышает цену товара - выводим лог "(ваше название товара) приобретён. 
 // Спасибо за покупку!", если нет - обсчитываем разницу и выводим лог "Вам не хватает X$, пополните баланс". 
 
-let product = "Шоколад";
-let price = 100;
-let budget = 170;
-let checkWallet = budget >= price ? `${product} приобретён. Спасибо за покупку!` : `Вам не хватает ${price - budget} дирхемов, пополните баланс`
-console.log(checkWallet);
+const product = "Шоколад";
+const price = 100;
+const budget = 170;
+const buyProduct =
+  budget >= price
+    ? `${product} приобретён. Спасибо за покупку!`
+    : `Вам не хватает ${price - budget} дирхемов, пополните баланс`;
+console.log(buyProduct);
 
 // 6. Создать 1 функцию и именовать её по своему усмотрению
 
-let bullets = 30;
-let magClip = bullets === 30 ? 'Полный магазин' : bullets === 0 ? 'Пустой магазин' : bullets >0 && bullets < 30 ? 'Неполный магазин' : 'Пересчитать' ;
-console.log(magClip);
+function showMagazineStatus(bullets) {
+  if (bullets >0 && bullets < 30) {
+    console.log('Неполный магазин');
+  } else if (bullets === 0) {
+    console.log('Пустой магазин');
+  } else if (bullets===30) {
+    console.log('Полный магазин');
+  } else {
+    console.log('Ошибка. Пересчитать.');
+  }
+}
 
 // 7. Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
 
 const FREEFALL_SPEED = 9.8;
-let bulletWounds = 3;
-const death = true;
+const bulletWounds = 3;
+const isAlive = true;
