@@ -9,10 +9,10 @@ showCityTemperature("Грозный", "17");
 
 // или короткий вариант с помощью стрелочной функции:
 
-const showCityTemperature = (city, temperature) =>
+const showCityTemperature2 = (city, temperature) =>
   console.log(`Температура в городе ${city}: ${temperature}\u00B0C`);
 
-showCityTemperature('Валарг', '15');
+showCityTemperature2('Валарг', '15');
 
 // 4. Создать переменную, которая хранит внутри себя скорость звука (гуглим). 
 // Создать функцию, которая принимает 1 параметр - скорость, внутри функции происходит проверка: 
