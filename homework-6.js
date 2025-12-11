@@ -28,8 +28,8 @@ const vehicle = {
   transmission: "A833 manual",
 }
 
-const updatedVehicleInfo = {...vehicle, owner: hero}
-console.log(updatedVehicleInfo)
+vehicle.owner = hero
+console.log(vehicle)
 
 // 5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. 
 // Она проверяет, есть ли в объекте свойство "максимальная скорость", 
