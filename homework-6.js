@@ -28,6 +28,9 @@ const vehicle = {
   transmission: "A833 manual",
 }
 
+const updatedVehicleInfo = {...vehicle, owner: hero}
+console.log(updatedVehicleInfo)
+
 // 5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. 
 // Она проверяет, есть ли в объекте свойство "максимальная скорость", 
 // если нет - добавляет его и задает значение, 
@@ -157,14 +160,7 @@ console.log(allBooks);
 // нет - false (значит это не редкий).
 
 function markRareBooks(books) {
-  return books.map(book => {
-    if (book.compositionDate !== "XXI век") {
-      book.isRare = true;
-    } else {
-      book.isRare = false;
-    }
-    return book;
-  });
+  return books.map(book => ({ ...book, isRare: book.compositionDate !== "XXI век" }));
 }
 
 console.log(markRareBooks(islamicBooks));
