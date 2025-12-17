@@ -1,3 +1,5 @@
+import { comments } from "./comments.js";
+
 // 2. Создать массив чисел от 1 до 10. 
 // Отфильтровать его таким образом, что бы мы получил массив чисел, начиная с 5.
 
@@ -45,12 +47,10 @@ console.log(getReversedArray(gunsArray));
 // работать с ней. Когда мы введем название переменной, 
 // нам предложит импортировать ее - так и делаем.
 
-import { commentsArray } from "./comments.js";
-
 // 7. Вывести в консоль массив тех комментариев, 
 // почта пользователей которых содержит ".com"
 
-const filteredComComments = commentsArray.filter(comment =>
+const filteredComComments = comments.filter(comment =>
   comment.email.includes(".com"),
 );
 
@@ -59,7 +59,7 @@ console.log(filteredComComments);
 // 8. Перебрать массив таким образом, что бы пользователи с id меньше или 
 // равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-const idComments = commentsArray.map(comment => {
+const idComments = comments.map(comment => {
   if (comment.id <= 5) {
     comment.postId = 2;
   } else {
@@ -73,7 +73,7 @@ console.log(idComments);
 
 // 9. Перебрать массив, что бы объекты состояли только из айди и имени
 
-const shortCommentProfile = commentsArray.map(({ id, name }) => ({ id, name }));
+const shortCommentProfile = comments.map(({ id, name }) => ({ id, name }));
 
 console.log(shortCommentProfile);
 
@@ -81,7 +81,7 @@ console.log(shortCommentProfile);
 // проверяем: если длина тела сообщения (body) больше 180 символов - 
 // устанавливаем true, меньше - false.
 
-const markedLongComments = commentsArray.map(comment => ({
+const markedLongComments = comments.map(comment => ({
   ...comment,
   isInvalid: comment.body.length > 180,
 }));
@@ -93,14 +93,14 @@ console.log(markedLongComments);
 // 11. Почитать про метод массива reduce. 
 // Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
-const emailsOnlyArrayReduce = commentsArray.reduce((emails, comment) => {
+const emailsOnlyArrayReduce = comments.reduce((emails, comment) => {
   emails.push(comment.email);
   return emails;
 }, []);
 
 console.log(emailsOnlyArrayReduce);
 
-const emailsOnlyArrayMap = commentsArray.map(comment => comment.email);
+const emailsOnlyArrayMap = comments.map(comment => comment.email);
 
 console.log(emailsOnlyArrayMap);
 
@@ -110,4 +110,4 @@ console.log(emailsOnlyArrayMap);
 
 const emails = emailsOnlyArrayMap.join(", ")
 
-console.log(emails)
+console.log(emails);
