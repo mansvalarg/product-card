@@ -27,7 +27,6 @@ function renderProducts(productsToRender) {
     productClone.querySelector(".product-name").textContent = product.name;
     productClone.querySelector(".product-description").textContent = product.description;
     const compoundList = productClone.querySelector(".product-compound");
-    compoundList.innerHTML = "";
     product.ingredients.forEach((item) => {
       const li = document.createElement("li");
       li.className = "product-compound-item";
