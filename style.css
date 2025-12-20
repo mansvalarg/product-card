@@ -65,9 +65,9 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 45px;
   list-style: none;
   justify-content: center;
+  gap: 45px;
   margin-left: 85px;
   margin-bottom: 116px;
   width: 1110px;
@@ -125,4 +125,10 @@
 .two-color-button-alt {
   background-color: #9d9074;
   color: #000000;
+}
+
+.product-image {
+  width: 290px;
+  height: 245px;
+  object-fit: contain;
 }
