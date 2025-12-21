@@ -22,7 +22,7 @@ function renderProducts(productsToRender) {
   productList.innerHTML = "";
   productsToRender.forEach((product) => {
     const productClone = productTemplate.content.cloneNode(true);
-    productClone.querySelector(".product-image").src = product.img;
+    productClone.querySelector(".product-image").src = `images/diamaint/${product.img}.png`;
     productClone.querySelector(".product-category").textContent = product.skinType;
     productClone.querySelector(".product-name").textContent = product.name;
     productClone.querySelector(".product-description").textContent = product.description;
@@ -58,7 +58,7 @@ console.log(productDescriptions)
 // которое нужно ввести, другая - 
 // рендерить эти карточки (принимая массив аргументом)
 
-function getCardQuantity () {
+function getCardQuantity() {
   const input = prompt("Сколько карточек отобразить? От 1 до 5")
   const quantity = parseInt(input);
   if (quantity >=1 && quantity <=5) {
