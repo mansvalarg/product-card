@@ -59,9 +59,9 @@ console.log(productDescriptions)
 // рендерить эти карточки (принимая массив аргументом)
 
 function getCardQuantity() {
-  const input = prompt("Сколько карточек отобразить? От 1 до 5")
+  const input = prompt("Сколько карточек отобразить? От 1 до 5");
   const quantity = parseInt(input);
-  if (quantity >=1 && quantity <=5) {
+  if (quantity >= 1 && quantity <= 5) {
     return quantity;
   } 
   alert ("Число не введено или введено неправильное число. Перезагрузите страницу и введите число от 1 до 5.");
