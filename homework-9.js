@@ -79,7 +79,6 @@ const confirmPasswordInput = document.querySelector('#confirmPassword');
 
 userRegistrationForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log(event)
   const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
   if (!userRegistrationForm.checkValidity() || !passwordsMatch) {
     alert('Регистрация отклонена: проверьте правильность данных или совпадение паролей!');
