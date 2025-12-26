@@ -169,13 +169,13 @@
   height: 18px;
   display: flex;
   justify-content: space-around;
-  gap: 30.5px;
+  gap: 30px;
 }
 
 .footer-tg-icon {
   margin-top: 42px;
   width: 21px;
-  height: 17.61px;
+  height: 17px;
 }
 
 .footer-vk-icon {
