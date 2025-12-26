@@ -38,10 +38,82 @@
       </li>
     </template>
   </ul>
-  <script src="main.js"></script>
+  <footer class="footer">
+    <div class="footer-main-container">
+      <div class="footer-main-container-title-block">
+        <h3 class="footer-title text-white">Product Cards</h3>
+        <p class="footer-description text-white">У нас самые лучшие продукты для кожи!</p>
+        <div class="footer-tg-vk-icons-container">
+          <a href="#"><img class="footer-tg-icon" src="/images/tg_icon.png" alt=""></a>
+          <a href="#"><img class="footer-vk-icon" src="/images/vk_icon.png" alt=""></a>
+        </div>
+      </div>
+      <div class="footer-main-container-subscribe-block">
+        <h3 class="footer-subscribe-title text-white">Подпишись на наши акции:</h3>
+        <form class="footer-subscribe-form">
+          <input name="email" id="subscribeEmail" type="email" placeholder="Введи Email..." class="footer-subscribe-email">
+          <div>|</div>
+          <button type="submit" class="footer-subscribe-button">Подписаться</button>
+        </form>
+      </div>
+      <div class="footer-main-container-nav-block">
+        <nav class="menu">
+          <ul class="footer-nav-container">
+            <li>
+              <button class="registration-button text-white" id="openModal">Регистрация</button>
+              <div class="overlay" id="overlay">
+                <div class="modal" id="modal">
+                  <button class="modal-close" id="closeModal">x</button>
+                  <h3>Введите свои данные:</h3>
+                  <form class="modal-subscribe-container" id="userRegistrationForm">
+                    <div>
+                      <label for="firstName">Имя:</label>
+                      <input type="text" id="firstName" name="firstName" placeholder="Введите имя" required>
+                    </div>
+                    <div>
+                      <label for="lastName">Фамилия:</label>
+                      <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" required>
+                    </div>
+                    <div>
+                      <label for="birthDate">Дата рождения:</label>
+                      <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div>
+                      <label for="login">Логин:</label>
+                      <input type="text" id="login" name="login" placeholder="Придумайте логин" required>
+                    </div>
+                    <div>
+                      <label for="password">Пароль:</label>
+                      <input type="password" id="password" name="password" placeholder="Придумайте пароль" required>
+                    </div>
+                    <div>
+                      <label for="confirmPassword">Повторите пароль:</label>
+                      <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <li><hr></hr></li>
+            <li><a class="footer-nav-title text-white">Быстрые ссылки</a></li>
+            <li><a href="#" class="footer-nav-link text-white">Главная</a></li>
+            <li><a href="#" class="footer-nav-link text-white">Магазин</a></li>
+            <li><a href="#" class="footer-nav-link text-white">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-copyright-container">
+      <hr class="footer-line-above-copyright"></hr>
+      <p class="footer-copyright-text text-white">www.product-cards.com©all right reserve</p>
+    </div>
+  </footer>
+  <script sr5c="main.js"></script>
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>
   <script type="module" src="homework-7.js"></script>
   <script type="module" src="homework-8.js"></script>
+  <script type="module" src="homework-9.js"></script>
 </body>
 </html>
