@@ -132,3 +132,189 @@
   height: 245px;
   object-fit: contain;
 }
+
+.footer {
+  width: 1728px;
+  height: 477px;
+  background-color: #585858;
+}
+
+.footer-main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1569px;
+  height: 147px;
+  margin-left: 84px;
+  padding-top: 85px;
+}
+
+.footer-title {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 154%;
+  text-transform: capitalize;
+}
+
+.footer-description {
+  width: 409px;
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 154%;
+  text-transform: capitalize;
+}
+
+.footer-tg-vk-icons-container {
+  width: 97px;
+  height: 18px;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.footer-tg-icon {
+  margin-top: 42px;
+  width: 21px;
+  height: 17px;
+}
+
+.footer-vk-icon {
+  margin-top: 42px;
+  width: 24px;
+  height: 14px;
+}
+
+.footer-subscribe-title {
+  width: 350px;
+  height: 29px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: -74px;
+}
+
+.footer-subscribe-form {
+  color: #000000;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 10px;
+  width: 477px;
+  height: 61px;
+  margin-left: -132px;
+}
+
+.footer-subscribe-email {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.footer-subscribe-button {
+  border: none;
+  background: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.footer-copyright-container{
+  margin-top: 262px;
+  margin-left: 676px;
+}
+
+.footer-line-above-copyright {
+  width: 66px;
+  margin-left: 155px;
+}
+
+.footer-copyright-text {
+  width: 376px;
+  height: 22px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  margin-top: 33px;
+}
+
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 178px;
+  height: 147px;
+  list-style: none;
+  padding: 0;
+  margin-right: 75px;
+}
+
+.footer-nav-link {
+  width: 178px;
+  margin-top: 17px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+.footer-nav-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.registration-button {
+  border: none;
+  background: none;
+  font-size: 26px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #201404c4;
+  z-index: 10;
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 11;
+  display: none;
+  width: 350px;
+}
+
+.modal-showed {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+.modal-subscribe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-white {
+  color: #ffffff;
+}
