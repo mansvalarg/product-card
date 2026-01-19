@@ -37,25 +37,25 @@
 // (Создаем класс overlay, который будет затемнять всю страницу)
 // 2) Модальное окно находиться ровно по центру страницы, независимо от масштаба
 
-const openButton = document.querySelector('#openModal');
-const closeButton = document.querySelector('#closeModal');
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('#overlay');
+// const openButton = document.querySelector('#openModal');
+// const closeButton = document.querySelector('#closeModal');
+// const modal = document.querySelector('#modal');
+// const overlay = document.querySelector('#overlay');
 
 // Функция при открытии modal
-openButton.addEventListener('click', () => {
-  modal.classList.add('modal-showed');
-  overlay.classList.add('modal-showed');
-})
+// , (openButton.addEventListener('click') => {
+//   modal.classList.add('modal-showed');
+//   overlay.classList.add('modal-showed');
+// })
 
 // Функция при закрытии modal
-const closeModal = () => {
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('modal-showed');
-}
+// const closeModal = () => {
+//   modal.classList.remove('modal-showed');
+//   overlay.classList.remove('modal-showed');
+// }
 
 // Кнопка закрытия окна modal
-closeButton.addEventListener('click', closeModal);
+// closeButton.addEventListener('click', closeModal);
 
 // 6. Создать форму для регистрации внутри модального окна. 
 // Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля. 
@@ -71,29 +71,29 @@ closeButton.addEventListener('click', closeModal);
 // (используем сущность new Date()). Также создайте внешнюю переменную user и присвойте ей этот объект. 
 // После успешной регистрации - модалка должны закрыться. 
 
-let user = {};
+// let user = {};
 
-const userRegistrationForm = document.querySelector('#userRegistrationForm');
-const passwordInput = document.querySelector('#password');
-const confirmPasswordInput = document.querySelector('#confirmPassword');
+// const userRegistrationForm = document.querySelector('#userRegistrationForm');
+// const passwordInput = document.querySelector('#password');
+// const confirmPasswordInput = document.querySelector('#confirmPassword');
 
-userRegistrationForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
-  if (!userRegistrationForm.checkValidity() || !passwordsMatch) {
-    alert('Регистрация отклонена: проверьте правильность данных или совпадение паролей!');
-    return;
-  }
-  const form = event.target;
-  const formData = new FormData(form);
-  const userData = Object.fromEntries(formData.entries());
-  userData.createdOn = new Date();
-  user = userData;
-  console.log('Новый пользователь:', user);
-  alert('Регистрация успешна!');
-  closeModal();
-  userRegistrationForm.reset();
-});
+// userRegistrationForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
+//   if (!userRegistrationForm.checkValidity() || !passwordsMatch) {
+//     alert('Регистрация отклонена: проверьте правильность данных или совпадение паролей!');
+//     return;
+//   }
+//   const form = event.target;
+//   const formData = new FormData(form);
+//   const userData = Object.fromEntries(formData.entries());
+//   userData.createdOn = new Date();
+//   user = userData;
+//   console.log('Новый пользователь:', user);
+//   alert('Регистрация успешна!');
+//   closeModal();
+//   userRegistrationForm.reset();
+// });
 
 // 7. Добавить к пулл-реквесту видео с работой форм, 
 // модального окна и сверстанного футера.
