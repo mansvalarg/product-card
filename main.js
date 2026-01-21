@@ -1,7 +1,8 @@
 import './homework-8.js';
 import './homework-9.js';
 import { Modal } from './modal.js';
-import { Form, RegistrationForm } from './form.js';
+import { Form } from './form.js';
+import { RegistrationForm } from './registration-form.js';
 
 // 1. Пройти тест, результат прикрепить к PR'у.
 
@@ -80,7 +81,6 @@ ak47.repair();
 const registrationModal = new Modal('modal');
 const registrationButton = document.getElementById('openModal');
 registrationButton.addEventListener('click', () => {registrationModal.openModal()});
-
 
 // 5. Создать файл Form.js и реализовать класс для формы под названием Form. 
 // Он будет принимать 1 параметр - айди формы. Внутри класса будут методы:

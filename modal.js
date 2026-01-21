@@ -17,21 +17,21 @@ export class Modal {
     this.closeModalButton();
   }
 
-  openModal () {
+  openModal() {
     this.modal.classList.add('modal-showed');
     this.overlay.classList.add('modal-showed');
   }
 
-  closeModal () {
+  closeModal() {
     this.modal.classList.remove('modal-showed');
     this.overlay.classList.remove('modal-showed');
   }
 
-  checkModal () {
+  checkModal() {
     return this.modal.classList.contains('modal-showed');
   }
 
-  closeModalButton () {
+  initCloseModal() {
     const closeButton = this.modal.querySelector('#closeModal');
     closeButton.addEventListener('click', () => {
       this.closeModal();
