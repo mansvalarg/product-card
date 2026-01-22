@@ -27,7 +27,7 @@ export class Modal {
     this.overlay.classList.remove('modal-showed');
   }
 
-  checkModal() {
+  isOpen() {
     return this.modal.classList.contains('modal-showed');
   }
 
