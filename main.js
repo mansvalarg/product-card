@@ -1,56 +1,21 @@
 import './homework-8.js';
 import './homework-9.js';
-import { Modal } from './modal.js';
-import { Form } from './form.js';
-import { RegistrationForm } from './registration-form.js';
+import { Modal } from './homework-10/Modal.js';
+import { Form } from './homework-10/Form.js';
+import { RegistrationForm } from './homework-10/RegistrationForm.js';
+import { Gun } from './homework-10/Gun.js'
+import { RefurbishedGun } from './homework-10/RefurbishedGun.js'
+import { NewGun } from './homework-10/NewGun.js'
 
 // 1. Пройти тест, результат прикрепить к PR'у.
-
-// Done
 
 // 2. Почитать про импорты файлов в другие файлы (side-effect import). 
 // На основе этого создать файл main.js. Его единственного использовать в index.html, 
 // а все остальные js файлы импортировать в главный.
 
-// Done
-
 // 3. Создать структуру на ваш выбор, как было показано в лекции 
 // (имеется ввиду - с машинами/бьюти-продуктами). 
 // Придумайте свою структуру и реализуйте наследуемость классов
-
-class Gun {
-  constructor(manufacturer, model) {
-    this.manufacturer = manufacturer;
-    this.model = model;
-  }
-
-  firetest() {
-    console.log(`${this.manufacturer}, ${this.model} протестировано.`);
-  }
-}
-
-class NewGun extends Gun {
-  constructor(manufacturer, model) {
-    super(manufacturer, model);
-    console.log(`${this.manufacturer}, ${this.model} - новое оружие.`);
-  }
-}
-
-class RefurbishedGun extends Gun {
-  constructor(manufacturer, model, condition) {
-    super(manufacturer, model);
-    this.condition = condition;
-    if (this.condition >= 95 + "%") {
-      console.log(`${this.model} - оружие восстановлено и готово к стрельбе.`);
-    } else {
-      console.log(`${this.model}: оценочное состояние ${this.condition} - необходим ремонт.`);
-    }
-  }
-
-  repair() {
-    console.log(`${this.manufacturer}, ${this.model} отправлено на восстановление.`);
-  }
-}
 
 const sw500 = new NewGun("Smith&Wesson", "500");
 const m1911 = new NewGun("Dan Wesson Firearms", "Valor .45 ACP");
@@ -109,9 +74,7 @@ userRegistrationForm.form.addEventListener('submit', (event) => {
 // mdn про this
 // learn.js про методы объекта, this (и задачами после)
 // learn.js про привязку контекста к функции  (и задачами после)
-
 // learn.js про class (только первые 2 темы)
 // mdn про class
 // metanit про class
-
 // Можете использовать для поиска информации ютуб, гпт и другие статьи. Главное - понять материал

@@ -1,4 +1,4 @@
-import { Form } from "./form";
+import { Form } from "./Form.js";
 
 export class RegistrationForm extends Form {
   constructor(formId) {
