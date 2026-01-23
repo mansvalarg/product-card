@@ -1,6 +1,7 @@
 import { Gun } from "./Gun.js";
 
 export class RefurbishedGun extends Gun {
+
   constructor(manufacturer, model, condition) {
     super(manufacturer, model);
     this.condition = condition;
@@ -14,4 +15,5 @@ export class RefurbishedGun extends Gun {
   repair() {
     console.log(`${this.manufacturer}, ${this.model} отправлено на восстановление.`);
   }
+
 }

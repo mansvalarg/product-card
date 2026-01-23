@@ -9,6 +9,7 @@
 // всем, что должна делать модалка.
 
 export class Form {
+
   constructor(formId) {
     this.form = document.getElementById(formId);
   }
@@ -24,4 +25,5 @@ export class Form {
   reset() {
     this.form.reset();
   }
+
 }

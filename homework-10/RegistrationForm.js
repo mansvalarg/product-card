@@ -1,6 +1,7 @@
 import { Form } from "./Form.js";
 
 export class RegistrationForm extends Form {
+
   constructor(formId) {
     super(formId);
   }
@@ -21,4 +22,5 @@ export class RegistrationForm extends Form {
     onSuccess();
     this.reset();
   }
+
 }

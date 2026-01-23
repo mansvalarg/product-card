@@ -59,13 +59,13 @@ registrationButton.addEventListener('click', () => {registrationModal.openModal(
 
 let user = {};
 
-const userRegistrationForm = new RegistrationForm('userRegistrationForm');
-userRegistrationForm.form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    userRegistrationForm.check(() => {
+const userRegistrationForm = new RegistrationForm("userRegistrationForm");
+userRegistrationForm.form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  userRegistrationForm.check(() => {
     registrationModal.closeModal();
   });
-})
+});
 
 // 6. Дополнительно проработать контекст функций, если тема непонятна и дается тяжело.
 

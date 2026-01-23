@@ -11,6 +11,7 @@
 // Как? Используя внутренние методы - мы можем управлять через айди модалки ее закрытием, открытием.
 
 export class Modal {
+
   constructor(modalId) {
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById('overlay');
@@ -37,4 +38,5 @@ export class Modal {
       this.closeModal();
     });
   }
+
 }
