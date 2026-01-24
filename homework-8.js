@@ -47,7 +47,7 @@ const productDescriptions = products.reduce((acc, product) => {
   return acc;
 }, []);
 
-console.log(productDescriptions)
+console.log(productDescriptions);
 
 // 5*. Реализовать функцию, которая при старте страницы выводит 
 // сообщение (через функцию prompt) "Сколько карточек отобразить? 

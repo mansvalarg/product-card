@@ -1,16 +1,10 @@
 // 1. Создаем файл, все как прошлых дз.
 
-// Done
-
 // 2. Почитать про теги: <label>, <form>, <input> 
 // (источники прикреплены в конце ДЗ)
 
-// Done
-
 // 3. Сверстать данный footer, используя семантические теги 
 // (footer, nav и т.д.)
-
-// Done
 
 // 4. К Форме, которая прикреплена в футере - добавить логику:
 // email должен соответствовать стандартам (добавить валидацию), 
@@ -37,26 +31,6 @@
 // (Создаем класс overlay, который будет затемнять всю страницу)
 // 2) Модальное окно находиться ровно по центру страницы, независимо от масштаба
 
-const openButton = document.querySelector('#openModal');
-const closeButton = document.querySelector('#closeModal');
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('#overlay');
-
-// Функция при открытии modal
-openButton.addEventListener('click', () => {
-  modal.classList.add('modal-showed');
-  overlay.classList.add('modal-showed');
-})
-
-// Функция при закрытии modal
-const closeModal = () => {
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('modal-showed');
-}
-
-// Кнопка закрытия окна modal
-closeButton.addEventListener('click', closeModal);
-
 // 6. Создать форму для регистрации внутри модального окна. 
 // Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля. 
 // Используйте <label> для того, что бы указать пользователю, какое поле за что отвечает. 
@@ -70,30 +44,6 @@ closeButton.addEventListener('click', closeModal);
 // Дополнительно мы должны добавить к этому объекту свойство createdOn и указать туда время создания 
 // (используем сущность new Date()). Также создайте внешнюю переменную user и присвойте ей этот объект. 
 // После успешной регистрации - модалка должны закрыться. 
-
-let user = {};
-
-const userRegistrationForm = document.querySelector('#userRegistrationForm');
-const passwordInput = document.querySelector('#password');
-const confirmPasswordInput = document.querySelector('#confirmPassword');
-
-userRegistrationForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
-  if (!userRegistrationForm.checkValidity() || !passwordsMatch) {
-    alert('Регистрация отклонена: проверьте правильность данных или совпадение паролей!');
-    return;
-  }
-  const form = event.target;
-  const formData = new FormData(form);
-  const userData = Object.fromEntries(formData.entries());
-  userData.createdOn = new Date();
-  user = userData;
-  console.log('Новый пользователь:', user);
-  alert('Регистрация успешна!');
-  closeModal();
-  userRegistrationForm.reset();
-});
 
 // 7. Добавить к пулл-реквесту видео с работой форм, 
 // модального окна и сверстанного футера.
