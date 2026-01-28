@@ -6,6 +6,7 @@ import { RegistrationForm } from './homework-10/RegistrationForm.js';
 import { Gun } from './homework-10/Gun.js'
 import { RefurbishedGun } from './homework-10/RefurbishedGun.js'
 import { NewGun } from './homework-10/NewGun.js'
+import './homework-11/homework-11.js'
 
 // 1. Пройти тест, результат прикрепить к PR'у.
 
