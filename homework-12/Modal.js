@@ -25,18 +25,29 @@ export class Modal {
     const button = document.getElementById(buttonId);
     button.addEventListener('click', () => {
       this.open();
-    })
+    });
+    button.removeEventListener('click', () => {
+      this.open();
+    });
   }
 
   #initClose(shouldCloseOnOverlay) {
-    const closeButton = this.modal.querySelector('#modal-close-button')
+    const closeButton = this.modal.querySelector('#modal-close-button');
 
     closeButton.addEventListener('click', () => {
       this.close();
     })
+    closeButton.removeEventListener('click', () => {
+      this.close();
+    });
 
     if (shouldCloseOnOverlay) {
       this.overlay.addEventListener('click', () => {
+        if (this.modal.classList.contains('modal-showed')) {
+          this.close();
+        }
+      });
+      this.overlay.removeEventListener('click', () => {
         if (this.modal.classList.contains('modal-showed')) {
           this.close();
         }
