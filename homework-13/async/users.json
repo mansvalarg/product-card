@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Muhammad",
+      "surname": "ibn Mansur",
+      "email": "murabit@umma.hl",
+      "age": 33,
+      "location": "Valarg",
+      "img": "muhammad_ibn_mansur"
+    },
+    {
+      "id": 2,
+      "name": "Yahya",
+      "surname": "ibn Mansur",
+      "email": "ymmed@umma.hl",
+      "age": 20,
+      "location": "Medina",
+      "img": "yahya_ibn_mansur"
+    },
+    {
+      "id": 3,
+      "name": "Hamza",
+      "surname": "ibn Muhammad",
+      "email": "hamzamk@umma.hl",
+      "age": 60,
+      "location": "Mekka",
+      "img": "hamza_ibn_muhammad"
+    },
+    {
+      "id": 4,
+      "name": "AbduLlah",
+      "surname": "ibn Mansur",
+      "email": "admsk@umma.hl",
+      "age": 26,
+      "location": "Damask",
+      "img": "abduLlah_ibn_mansur"
+    },
+    {
+      "id": 5,
+      "name": "Habbab",
+      "surname": "ibn Mansur",
+      "email": "habgazza@umma.hl",
+      "age": 40,
+      "location": "Gazza",
+      "img": "habbab_ibn_mansur"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async test</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <div>
+    <h1 class="opening-text" id="loading-text">Данные загружаются</h1>
+  </div>
+  <ul id="user-list" class="user-list">
+    <template id="user-template">
+      <li>
+        <div class="user-container">
+          <span class="user-id"></span>
+          <img class="user-photo" src="" alt="">
+          <span>
+            <h3 class="user-name"></h3>
+            <h3 class="user-surname"></h3>
+            <p class="user-age"></p>
+            <p class="user-location"></p>
+            <p class="user-email"></p>
+          </span>
+        </div>
+        <button class="delete-button button">Удалить</button>
+      </li>
+    </template>
+  </ul>
+  <div class="control-panel">
+    <button class="delete-all-button button">Удалить все</button>
+    <button class="delete-user-button button">Удалить пользователя 
+      <input type="number" id="delete-id-input" placeholder="Введи id пользователя"></input>
+    </button>
+    <button class="add-all-button button">Добавить всех</button>
+  </div>
+  <script type="module" src="async.js"></script>
+</body>
+</html>
