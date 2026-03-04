@@ -60,7 +60,7 @@ deleteAllButton.addEventListener('click', deleteAll);
 function deleteAll() {
   users =[];
   localStorage.removeItem('users');
-  renderUsers(users)
+  renderUsers(users);
 }
 
 const addAllButton = document.querySelector('.add-all-button');
