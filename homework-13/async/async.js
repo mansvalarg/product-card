@@ -4,8 +4,9 @@ const userList = document.getElementById("user-list");
 let users = [];
 
 const savedUsers = localStorage.getItem('users');
-if (savedUsers === null) { fetchData() }
-else {
+if (savedUsers === null) {
+  fetchData()
+} else {
   users = JSON.parse(savedUsers);
   document.getElementById('loading-text').innerText = '';
   renderUsers(users);
@@ -15,7 +16,7 @@ async function fetchData() {
   try {
     const loadingImitation = await new Promise(resolve => {
       setTimeout(resolve, 3000);
-    })
+    });
     const response = await fetch('./users.json');
     const data = await response.json();
     users = data.users;
@@ -56,7 +57,11 @@ function deleteUser(id) {
 
 const deleteAllButton = document.querySelector('.delete-all-button');
 deleteAllButton.addEventListener('click', deleteAll);
-function deleteAll() { users =[]; localStorage.removeItem('users'); renderUsers(users) }
+function deleteAll() {
+  users =[];
+  localStorage.removeItem('users');
+  renderUsers(users)
+}
 
 const addAllButton = document.querySelector('.add-all-button');
 addAllButton.addEventListener('click', getAllUsers);
